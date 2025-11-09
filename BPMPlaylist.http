@@ -1,0 +1,6 @@
+@BPMPlaylist_HostAddress = http://localhost:5138
+
+GET {{BPMPlaylist_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
