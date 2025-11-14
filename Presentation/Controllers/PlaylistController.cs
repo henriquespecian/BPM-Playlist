@@ -14,10 +14,6 @@ namespace BPMPlaylist.Presentation.Controllers
             _playlistService = playlistService;
         }
 
-        /// <summary>
-        /// Create a playlist based on tempo
-        /// </summary>
-        /// <returns></returns>
         [HttpPost]
         [Route("")]
         public async Task<IActionResult> CreatePlaylist(int tempo)

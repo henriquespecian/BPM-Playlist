@@ -1,5 +1,7 @@
 ﻿using BPMPlaylist.Application.Interfaces;
 using BPMPlaylist.Application.Services;
+using SpotifyAPI.Web;
+using static SpotifyAPI.Web.Scopes;
 
 namespace BPMPlaylist.Application
 {
@@ -7,8 +9,9 @@ namespace BPMPlaylist.Application
     {
         public static IServiceCollection AddApplication(this IServiceCollection services)
         {
-
-            services.AddScoped<IPlaylistService, PlaylistService>();
+            services.AddScoped<IPlaylistService, SpotifyPlaylistService>();
+            services.AddScoped<IAuthenticatorService, AuthenticationService>();
+            
 
             return services;
         }
